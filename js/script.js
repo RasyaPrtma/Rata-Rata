@@ -1,9 +1,9 @@
 const input = document.querySelectorAll('input');
 const jumlah = document.getElementById('jumlah');
+let click = 0;
 document.addEventListener('input', (e) => {
     jumlah.innerHTML = "";
 let num = 0;
-let click = 0;
 for (let i in input) {
     switch (input[i].className) {
         case 'ppkn':
@@ -165,7 +165,7 @@ for (let i in input) {
                     break;
                 case "s3":
                     if(input[27].value !== ""){
-                        num += parseFloat(input[28].value);
+                        num += parseFloat(input[27].value);
                     }
                     break;
                 case "s4":
@@ -242,27 +242,27 @@ for (let i in input) {
             switch (input[i].name) {
                 case "s1":
                     if(input[40].value !== ""){
-                        num += parseFloat(input[35].value);
+                        num += parseFloat(input[40].value);
                     }
                     break;
                 case "s2":
                     if(input[41].value !== ""){
-                        num += parseFloat(input[36].value);
+                        num += parseFloat(input[41].value);
                     }
                     break;
                 case "s3":
                     if(input[42].value !== ""){
-                        num += parseFloat(input[37].value);
+                        num += parseFloat(input[42].value);
                     }
                     break;
                 case "s4":
                     if(input[43].value !== ""){
-                        num += parseFloat(input[38].value);
+                        num += parseFloat(input[43].value);
                     }
                     break;
                 case "s5":
                     if(input[44].value !== ""){
-                        num += parseFloat(input[39].value);
+                        num += parseFloat(input[44].value);
                     }
                     break;
             }
@@ -270,13 +270,5 @@ for (let i in input) {
     }
     
 }
-if(e.isTrusted){
-    if(click == 0){
-        click++;
-    }else if(click > 0){
-        click+= 1;
-    }
-}
-console.log(click)
-jumlah.innerHTML += num;
+jumlah.innerHTML += num/45;
 })
